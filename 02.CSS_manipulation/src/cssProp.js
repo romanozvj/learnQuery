@@ -9,8 +9,9 @@ function cssProp() {
   let stringerini = property + ": " + value;
   if (typeof property === "object") {
     let arrayOfProps = Object.keys(property);
-    elemento.style[arrayOfProps[0]] = property[arrayOfProps[0]];
-    elemento.style[arrayOfProps[1]] = property[arrayOfProps[1]];
+    for (let i = 0; i < arrayOfProps.length; i++) {
+      elemento.style[arrayOfProps[i]] = property[arrayOfProps[i]];
+    }
   }
 
   if (arguments[2] === undefined) {
