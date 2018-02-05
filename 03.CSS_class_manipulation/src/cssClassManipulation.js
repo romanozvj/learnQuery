@@ -2,17 +2,17 @@ var cssClass = (function () {
   'use strict'
 
   return {
-    add: function(element, class) {
-      element.classList.add(class);
-    }
-    remove: function(element, class) {
-      element.classList.remove(class)
-    }
-    toggle: function(element, class) {
-      element.classList.toggle(class);
-    }
-    has: function(element, class) {
-      element.classList.contains(class);
+    add: function(element, className) {
+      element.classList.add(className);
+    },
+    remove: function(element, className) {
+      element.classList.remove(className)
+    },
+    toggle: function(element, className) {
+      element.classList.toggle(className);
+    },
+    has: function(element, className) {
+      return element.classList.contains(className);
     }
   }
 })()
